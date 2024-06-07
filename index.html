@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        width: 100vw;
+        margin: auto;
+      }
+      .navbar {
+        width: 98vw;
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        z-index: 1000;
+      }
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 2px 15px;
+      }
+      .navbar a:hover {
+        background-color: #575757;
+        border-radius: 4px;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .img {
+        border-radius: 10px;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f4f4f4;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        right: 0; /* Adjust based on the alignment needed */
+      }
+      .dropdown-content button {
+        background-color: white;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border: none;
+        width: 100%;
+        text-align: left;
+      }
+      .dropdown-content button:hover {
+        background-color: #ddd;
+      }
+      .registration-button {
+        padding: 10px 20px;
+        background-color: #17a2b8;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .home {
+        height: 88vh;
+        width: 99vw;
+      }
+
+      /* Responsive adjustments */
+      @media screen and (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          align-items: stretch;
+          padding-top: 20px;
+        }
+        .navbar-links {
+          margin-top: 10px;
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .dropdown {
+          margin-top: 10px;
+        }
+      }
+    </style>
+    <script>
+      function toggleDropdown() {
+        var dropdown = document.getElementById("dropdown-content");
+        if (dropdown.style.display === "block") {
+          dropdown.style.display = "none";
+        } else {
+          dropdown.style.display = "block";
+        }
+      }
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".registration-button")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+              openDropdown.style.display = "none";
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-brand">
+        <img
+          class="img"
+          src="../ResturentApp/khanadotcom.jpg"
+          alt="random"
+          height="50px"
+          width="50px" />
+      </div>
+      <div class="navbar-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <div class="dropdown">
+          <button class="registration-button" onclick="toggleDropdown()">
+            Registration
+          </button>
+          <div id="dropdown-content" class="dropdown-content">
+            <button onclick="window.location.href='Customer.html'">
+              Customer
+            </button>
+            <button onclick="window.location.href='Delivery.html'">
+              Delivery Person
+            </button>
+            <button onclick="window.location.href='Restaurant.html'">
+              Restaurant
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add your content here -->
+
+    <img
+      class="home"
+      src="https://img.freepik.com/free-vector/flat-restaurant-interior_23-2147538450.jpg?t=st=1717734107~exp=1717737707~hmac=b38ece19e571560ce2b48b5b001cc27ea0df8b722e0e49d2f75df46a0a5646e0&w=740 "
+      alt="random" />
+  </body>
+</html>
