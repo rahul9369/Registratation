@@ -1,16 +1,16 @@
-function toggleDropdown(dropdownId) {
-  document.getElementById(dropdownId).classList.toggle("show");
+function toggleDropdown(id) {
+  document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
+    if (dropdown.id !== id) {
+      dropdown.classList.remove("show");
+    }
+  });
+  document.getElementById(id).classList.toggle("show");
 }
 
-// Close the dropdown if the user clicks outside of it
 window.onclick = function (event) {
   if (!event.target.matches(".dropbtn")) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show")) {
-        openDropdown.classList.remove("show");
-      }
-    }
+    document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
+      dropdown.classList.remove("show");
+    });
   }
 };

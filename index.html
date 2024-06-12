@@ -5,54 +5,239 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Navbar with Dropdowns</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
   </head>
   <body>
     <div class="navbar">
       <div class="nav-left">
-        <img src="khanadotcom.jpg" alt="random" />
+        <img class="img1" src="khanadotcom.jpg" alt="random" />
       </div>
       <div class="nav-right">
+        <div class="dropdown">
+          <button onclick="toggleDropdown('dropdown3')" class="dropbtn">
+            Filter
+          </button>
+          <div id="dropdown3" class="dropdown-content">
+            <label><input type="checkbox" name="option1" /> Dosha</label>
+            <label><input type="checkbox" name="option2" /> Most Rated</label>
+            <label
+              ><input type="checkbox" name="option3" /> Chinese Retro</label
+            >
+            <label><input type="checkbox" name="option4" /> Subway</label>
+          </div>
+        </div>
+
         <div class="dropdown">
           <button onclick="toggleDropdown('dropdown1')" class="dropbtn">
             Registration
           </button>
           <div id="dropdown1" class="dropdown-content">
-            <a href="customer.html"
-              ><i class="fa-solid fa-user-group"></i>Customer
+            <a href="customer.html">
+              <i class="fa-solid fa-user-group"></i> Customer
             </a>
-            <a href="Delivery.html"
-              ><i class="fa-solid fa-truck-ramp-box"></i>Delivery Person</a
-            >
-            <a href="Restaurant.html"
-              ><i class="fa-solid fa-utensils"></i>Restaurant</a
-            >
+            <a href="Delivery.html">
+              <i class="fa-solid fa-truck-ramp-box"></i> Delivery Person
+            </a>
+            <a href="Restaurant.html">
+              <i class="fa-solid fa-utensils"></i> Restaurant
+            </a>
           </div>
         </div>
         <div class="dropdown">
           <button onclick="toggleDropdown('dropdown2')" class="dropbtn">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-bars"></i>
           </button>
           <div id="dropdown2" class="dropdown-content">
-            <a href="userform/Login.html"
-              ><i class="fa-regular fa-user"></i>Login</a
-            >
-            <a href="contactus.html"
-              ><i class="fa-regular fa-address-book"></i>Contactus</a
-            >
+            <a href="menu/menu.html">
+              <i class="fa-solid fa-calendar-days"></i>Menu
+            </a>
+            <a href="userform/Login.html">
+              <i class="fa-regular fa-user"></i> Login
+            </a>
+            <a href="contactus.html">
+              <i class="fa-regular fa-address-book"></i> Contact Us
+            </a>
+
+            <a href="updateUserProfile/index.html"
+              ><i class="fa-regular fa-user"></i> Update Profile
+            </a>
+
             <a href="otp/otpform.html">Otp Form</a>
+            <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
           </div>
         </div>
       </div>
     </div>
 
-    <h1 class="text">Welcome to KhanaDotCom</h1>
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="/carusalimg1.png" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="/carusalimg2.png" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="/carusalimg3.png" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- <div class="option">
+      <div class="services">
+        <p>24*7 Delivery</p>
+      </div>
+      <div class="services">
+        <p>50 Delivery</p>
+      </div>
+      <div class="services">
+        <p>Fast Delivery</p>
+      </div>
+      <div class="services">
+        <p>few minutes Delivery</p>
+      </div>
+    </div> -->
+
+    <div class="container">
+      <div class="restaurant-card">
+        <img
+          src="https://img.freepik.com/free-photo/restaurant-interior_1127-3394.jpg?t=st=1718173925~exp=1718177525~hmac=7a4eafbea9346634921b976477eedd5576338e203d8e09da27b523231b96ff99&w=996"
+          alt="The Gourmet Kitchen" />
+        <h2>The Gourmet Kitchen</h2>
+        <p>Fine dining experience with gourmet dishes.</p>
+        <p class="rating">★★★★★</p>
+      </div>
+      <div class="restaurant-card">
+        <img
+          src="https://img.freepik.com/free-photo/high-angle-shot-table-with-elegant-setting-restaurant-hall-evening_181624-24706.jpg?t=st=1718174211~exp=1718177811~hmac=cd67418d4901354862409101939fab6a6e5400153c119e00ba6abc8621971db9&w=996"
+          alt="The Gourmet Kitchen" />
+        <h2>The Gourmet Kitchen</h2>
+        <p>Fine dining experience with gourmet dishes.</p>
+        <p class="rating">★★★★★</p>
+      </div>
+      <div class="restaurant-card">
+        <img
+          src="https://img.freepik.com/free-photo/ancient-chinise-room_1417-1692.jpg?t=st=1718173956~exp=1718177556~hmac=c19650bff2c20879d149856c16aeda76ee0526d1fb484c606dbb4cc480f7306f&w=996"
+          alt="The Gourmet Kitchen" />
+        <h2>The Gourmet Kitchen</h2>
+        <p>Fine dining experience with gourmet dishes.</p>
+        <p class="rating">★★★★★</p>
+      </div>
+      <div class="restaurant-card">
+        <img
+          src="https://img.freepik.com/free-photo/rustic-chandelier-made-bulbs-ropes-dining-table-vintage-kitchen_181624-9173.jpg?t=st=1718173987~exp=1718177587~hmac=a5eb1eeb1a5be1ec7ba52f5c97fa5bfd3792d7f67d38384f529dc7526a07b866&w=996"
+          alt="The Gourmet Kitchen" />
+        <h2>The Gourmet Kitchen</h2>
+        <p>Fine dining experience with gourmet dishes.</p>
+        <p class="rating">★★★★★</p>
+      </div>
+      <div class="restaurant-card">
+        <img
+          src="https://img.freepik.com/free-photo/rustic-chandelier-made-bulbs-ropes-dining-table-vintage-kitchen_181624-9173.jpg?t=st=1718173987~exp=1718177587~hmac=a5eb1eeb1a5be1ec7ba52f5c97fa5bfd3792d7f67d38384f529dc7526a07b866&w=996"
+          alt="The Gourmet Kitchen" />
+        <h2>The Gourmet Kitchen</h2>
+        <p>Fine dining experience with gourmet dishes.</p>
+        <p class="rating">★★★★★</p>
+      </div>
+      <div class="restaurant-card">
+        <img
+          src="https://img.freepik.com/free-photo/rustic-chandelier-made-bulbs-ropes-dining-table-vintage-kitchen_181624-9173.jpg?t=st=1718173987~exp=1718177587~hmac=a5eb1eeb1a5be1ec7ba52f5c97fa5bfd3792d7f67d38384f529dc7526a07b866&w=996"
+          alt="The Gourmet Kitchen" />
+        <h2>The Gourmet Kitchen</h2>
+        <p>Fine dining experience with gourmet dishes.</p>
+        <p class="rating">★★★★★</p>
+      </div>
+      <div class="restaurant-card">
+        <img
+          src="https://img.freepik.com/free-photo/rustic-chandelier-made-bulbs-ropes-dining-table-vintage-kitchen_181624-9173.jpg?t=st=1718173987~exp=1718177587~hmac=a5eb1eeb1a5be1ec7ba52f5c97fa5bfd3792d7f67d38384f529dc7526a07b866&w=996"
+          alt="The Gourmet Kitchen" />
+        <h2>The Gourmet Kitchen</h2>
+        <p>Fine dining experience with gourmet dishes.</p>
+        <p class="rating">★★★★★</p>
+      </div>
+      <div class="restaurant-card">
+        <img
+          src="https://img.freepik.com/free-photo/rustic-chandelier-made-bulbs-ropes-dining-table-vintage-kitchen_181624-9173.jpg?t=st=1718173987~exp=1718177587~hmac=a5eb1eeb1a5be1ec7ba52f5c97fa5bfd3792d7f67d38384f529dc7526a07b866&w=996"
+          alt="The Gourmet Kitchen" />
+        <h2>The Gourmet Kitchen</h2>
+        <p>Fine dining experience with gourmet dishes.</p>
+        <p class="rating">★★★★★</p>
+      </div>
+    </div>
+
+    <!-- <div class="home">
+      <div class="text"><h1 class="text">Welcome to KhanaDotCom</h1></div>
+      <div class="img">
+        <img
+          height="98%"
+          width="95%"
+          style:{
+          border-radius="10px"
+          }
+          src="https://img.freepik.com/free-photo/exploding-burger-with-vegetables-melted-cheese-black-background-generative-ai_157027-1734.jpg?t=st=1718124598~exp=1718128198~hmac=80fa493d3dcb33104ee47cb4f78848d30012d46bade73ef889f4441ef0517b3a&w=1380"
+          alt="not found img" />
+      </div> 
+    </div>-->
     <div class="link">
-      <a href="contactus.html">Contact us</a>
-      <a href="About.html">About us</a>
+      <div class="about">
+        <a href="About.html"><h3>About Us</h3></a>
+        <div class="aboutchild">
+          <p>
+            information About khanadotcom,<br />
+            the services we offer<br />
+            and our mission.
+          </p>
+        </div>
+      </div>
+      <div class="about">
+        <a href="contactus.html"><h3>Contact Us</h3></a>
+        <p>Email:khanadotcom@gmail.com</p>
+        <p>Phone:+91 122-233-4452</p>
+      </div>
+      <div class="about">
+        <a href="About.html"><h3>Social Media</h3></a>
+        <p>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          <a href=""> <i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </p>
+      </div>
+      <div class="about">
+        <a href="About.html"><h3>Privacy Policy</h3></a>
+        <p>Read our Privacy Policy</p>
+      </div>
     </div>
     <script src="script.js"></script>
     <script
       src="https://kit.fontawesome.com/8a33eecc9b.js"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
   </body>
 </html>
