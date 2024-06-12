@@ -32,6 +32,7 @@ body {
 .dropdown {
   position: relative;
   display: inline-block;
+  margin-left: 5px;
 }
 
 .dropbtn {
@@ -80,7 +81,7 @@ body {
   .nav-right {
     width: 100%;
     text-align: center;
-    margin-left: 20px;
+    margin-left: 2px;
   }
 
   .nav-left a,
@@ -127,14 +128,14 @@ body {
   text-align: center;
 }
 
-.link {
+/* .link {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
   background-color: rgb(222, 234, 234);
   color: black;
   padding: 10px;
-}
+} */
 .checkbox-container,
 .container {
   width: 80%;
@@ -239,7 +240,7 @@ i {
   margin: 5px;
 }
 
-.option {
+/* .option {
   display: flex;
   justify-content: space-around;
 }
@@ -262,8 +263,42 @@ a[href]h3 {
   color: white;
 }
 .about {
-  text-align: center;
-}
+  text-align: center; */
+/* }
 .contact {
   text-align: center;
+} */
+
+.link {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  align-items: center;
+  background-color: rgb(222, 234, 234);
+  color: black;
+  padding: 10px;
+}
+
+.link .about {
+  width: 35%; /* Adjust the width as needed */
+  margin: 10px;
+  text-align: center;
+}
+
+.link .about h3 {
+  margin: 10px 0;
+}
+
+.link .about p {
+  margin: 5px 0;
+}
+
+.link .aboutchild p {
+  margin: 10px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .link .about {
+    width: 70%; /* Adjust the width for smaller screens */
+  }
 }
